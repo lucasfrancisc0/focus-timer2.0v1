@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-body: #FFFFFF;
+  --bg-buttons-sound: #E1E1E6;
+  --bg-button-actived: #02799D;
+  --bg-button-hover: #959ea1;
+
+  --fc-timer: #323238;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: var(--bg-body);
+
+  display: grid;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(4rem, 8rem + 10vh, 10rem);
+  color: var(--fc-timer);
+}
+
+main {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: clamp(4rem, 16rem + 3vh, 19.2rem);
+  padding: 1rem;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.timer {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  gap: clamp(2rem, 3rem + 10vh, 4rem);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonsSound {
+  display: grid;
+  grid-template-areas: "A B";
+  grid-gap: clamp(2rem, 2.8rem + 5vh, 3.2rem);
+}
+
+.buttonsSound button {
+  padding: clamp(3rem, 3.5rem + 2vh, 4.2rem);
+  background-color: #E1E1E6;
+  border-radius: 2.4rem;
+  width: (10rem, 13rem + 10vh, 13.8rem);
+  position: relative;
+}
+
+.buttonsSound button:hover {
+  background-color: #959ea1;
+}
+
+.selectedButtonSound {
+  background-color: var(--bg-button-actived)!important;
+}
+
+hide {
+  display: none;
+}
+
+@media (max-width: 970px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
